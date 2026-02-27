@@ -14,10 +14,10 @@ let perminute = perhour / 60;
 //jo ubsent thin or half leaves thin un kly ha ya
 let unpaidDays = absent + halfleave * 0.5;
 //leave logic
-if (sickLeave > 0) {
-  if (sickLeave <= 3) {
+if (sickleave > 0) {
+  if (sickleave <= 3) {
   } else {
-    let extraSickDays = sickLeave - 3;
+    let extraSickDays = sickleave - 3;
     unpaidDays += extraSickDays;
     alert(
       "Only 3 sick leaves are paid. Extra " +
@@ -27,10 +27,11 @@ if (sickLeave > 0) {
   }
 }
 let extramoney = 0;
+let shift = prompt("Enter the shift (day/night):").toLowerCase();
 if (shift === "night") {
   extramoney = 2000;
 
-  if (baseSalary >= 50000) {
+  if (basesalery >= 50000) {
     extramoney += 1000;
   }
 } else if (shift === "day") {
@@ -38,9 +39,9 @@ if (shift === "night") {
 } else {
   document.writeln("Invalid shift! Defaulting to day.");
 }
-let deduction = unpaidDays * perDay;
-let ramadanBonus = (bonusPercent / 100) * baseSalary;
-let netSalary = baseSalary - deduction + extra + ramadanBonus + extramoney;
+let deduction = unpaidDays * perday;
+let ramadanBonus = (ramdanbouspercent / 100) * basesalery;
+let netSalary = basesalery - deduction + extra + ramadanBonus + extramoney;
 document.writeln(
-  `Per Day: ${perDay.toFixed(2)}\nPer Hour: ${perHour.toFixed(2)}\nPer Minute: ${perMinute.toFixed(2)}\nNet Salary: ${netSalary.toFixed(2)}`,
+  `Per Day: ${perday.toFixed(2)}\nPer Hour: ${perhour.toFixed(2)}\nPer Minute: ${perminute.toFixed(2)}\nNet Salary: ${netSalary.toFixed(2)}`,
 );
