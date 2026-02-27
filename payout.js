@@ -43,5 +43,5 @@ let deduction = unpaidDays * perday;
 let ramadanBonus = (ramdanbouspercent / 100) * basesalery;
 let netSalary = basesalery - deduction + extra + ramadanBonus + extramoney;
 document.writeln(
-  `Per Day: ${perday.toFixed(2)}\nPer Hour: ${perhour.toFixed(2)}\nPer Minute: ${perminute.toFixed(2)}\nNet Salary: ${netSalary.toFixed(2)}`,
+  `Per Day: ${perday.toFixed(2)}</br>5000Per Hour: ${perhour.toFixed(2)}</br>Per Minute: ${perminute.toFixed(2)}</br>Net Salary: ${netSalary.toFixed(2)}`,
 );
