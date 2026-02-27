@@ -10,6 +10,7 @@ let hoursperday = 8;
 let perday = basesalery / daysinmonth;
 let perhour = perday / hoursperday;
 let perminute = perhour / 60;
+//jo ubsent thin or half leaves thin un kly ha ya
 let unpaidDays = absent + halfleave * 0.5;
 let deduction = unpaidDays * perday;
 
