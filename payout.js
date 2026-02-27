@@ -1,9 +1,9 @@
-let basesalery = 80000;
-let absent = 2;
-let halfleave = 1;
-let sickleave = 1;
-let extra = 5000;
-let ramdanbouspercent = 10;
+let basesalery = Number(prompt("Enter the base salary:"));
+let absent = Number(prompt("Enter the number of absent days:"));
+let halfleave = Number(prompt("Enter the number of half leave days:"));
+let sickleave = Number(prompt("Enter the number of sick leave days:"));
+let extra = Number(prompt("Enter the extra amount:"));
+let ramdanbouspercent = Number(prompt("Enter the Ramadan bonus percentage:"));
 let daysinmonth = 30;
 let hoursperday = 8;
 //total salery days month or hour  ka lyhaz sa
