@@ -10,3 +10,9 @@ let hoursperday = 8;
 let perday = basesalery / daysinmonth;
 let perhour = perday / hoursperday;
 let perminute = perhour / 60;
+let unpaidDays = absent + halfleave * 0.5;
+let deduction = unpaidDays * perday;
+
+// Net salary
+let ramadanBonus = (ramdanbouspercent / 100) * basesalery;
+let netSalary = basesalery - deduction + extra + ramadanBonus;
