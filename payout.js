@@ -4,3 +4,9 @@ let halfleave = 1;
 let sickleave = 1;
 let extra = 5000;
 let ramdanbouspercent = 10;
+let daysinmonth = 30;
+let hoursperday = 8;
+//total salery days month or hour  ka lyhaz sa
+let perday = basesalery / daysinmonth;
+let perhour = perday / hoursperday;
+let perminute = perhour / 60;
