@@ -39,9 +39,9 @@ if (shift === "night") {
 } else {
   document.writeln("Invalid shift! Defaulting to day.");
 }
-let deduction = unpaidDays * perday;
-let ramadanBonus = (ramdanbouspercent / 100) * basesalery;
-let netSalary = basesalery - deduction + extra + ramadanBonus + extramoney;
+let deduction = unpaidDays * perday; //wo psy jo absent or half leave k waja sa cut hon gy
+let ramadanBonus = (ramdanbouspercent / 100) * basesalery; //rmazan ka bonas add ho ga
+let netSalary = basesalery - deduction + extra + ramadanBonus + extramoney; //final salary calculate ho ga
 document.writeln(
-  `Per Day: ${perday.toFixed(2)}</br>Per Hour: ${perhour.toFixed(2)}</br>Per Minute: ${perminute.toFixed(2)}</br>Net Salary: ${netSalary.toFixed(2)}`,
+  `Per Day: ${perday.toFixed(2)}</br>Per Hour: ${perhour.toFixed(2)}</br>Per Minute: ${perminute.toFixed(2)}</br>Net Salary: ${netSalary.toFixed(2)}`, //sb print hon gi line break ho kr
 );
