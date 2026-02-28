@@ -37,11 +37,27 @@ if (shift === "night") {
 } else if (shift === "day") {
   extramoney = 0;
 } else {
-  document.writeln("Invalid shift! Defaulting to day.");
+  document.writeln("Invalid shift! Please enter 'day' or 'night'.");
 }
 let deduction = unpaidDays * perday; //wo psy jo absent or half leave k waja sa cut hon gy
 let ramadanBonus = (ramdanbouspercent / 100) * basesalery; //rmazan ka bonas add ho ga
 let netSalary = basesalery - deduction + extra + ramadanBonus + extramoney; //final salary calculate ho ga
-document.writeln(
-  `Per Day: ${perday.toFixed(2)}</br>Per Hour: ${perhour.toFixed(2)}</br>Per Minute: ${perminute.toFixed(2)}</br>Net Salary: ${netSalary.toFixed(2)}`, //sb print hon gi line break ho kr
-);
+const resultEl = document.getElementById("result");
+
+resultEl.innerHTML = `
+  <h5 class="mb-3 text-primary">Payroll Summary</h5>
+  <ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between">
+      <span>Per Day</span><strong>${perday.toFixed(2)}</strong>
+    </li>
+    <li class="list-group-item d-flex justify-content-between">
+      <span>Per Hour</span><strong>${perhour.toFixed(2)}</strong>
+    </li>
+    <li class="list-group-item d-flex justify-content-between">
+      <span>Per Minute</span><strong>${perminute.toFixed(2)}</strong>
+    </li>
+    <li class="list-group-item d-flex justify-content-between">
+      <span>Net Salary</span><strong>${netSalary.toFixed(2)}</strong>
+    </li>
+  </ul>
+`;
