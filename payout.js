@@ -29,7 +29,7 @@ if (sickleave > 0) {
 let extramoney = 0;
 let shift = prompt("Enter the shift (day/night):").toLowerCase();
 if (shift === "night") {
-  extramoney = 2000;
+  extramoney = 0.1 * basesalery; // 10% extra for night shift
 
   if (basesalery >= 50000) {
     extramoney += 1000;
