@@ -41,8 +41,6 @@ if (daysinmonth >= 31 || daysinmonth <= 0) {
   window.alert("Invalid input! Hours per day must be between 1 and 24.");
 } else if (perday <= 0) {
   window.alert("Invalid input! Per day salary must be greater than 0.");
-} else if (perhour <= 0) {
-  window.alert("Invalid input! Per hour salary must be greater than 0.");
 }
 //leave logic
 if (sickleave > 0) {
