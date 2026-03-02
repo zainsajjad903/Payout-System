@@ -15,8 +15,8 @@ let perminute = perhour / 60;
 let unpaidDays = absent + halfleave * 0.5;
 //invalid daays lgic
 if (daysinmonth > 31 || daysinmonth <= 0) {
-  window.alert(
-    "Invalid number of days in a month! Please enter a value less than or equal to 31.",
+  document.writeln(
+    "Invalid input! Number of days in the month must be between 1 and 31.",
   );
 } else if (
   absent < 0 ||
@@ -32,7 +32,7 @@ if (daysinmonth > 31 || daysinmonth <= 0) {
 } else if (extra <= 0) {
   window.alert("Invalid input! Extra amount cannot be negative.");
 } else if (ramdanbouspercent <= 0 || ramdanbouspercent >= 100) {
-  window.alert(
+  document.writeln(
     "Invalid input! Ramadan bonus percentage must be between 0 and 100.",
   );
 } else if (basesalery <= 0 || basesalery >= 1000000) {
