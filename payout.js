@@ -14,7 +14,7 @@ let perminute = perhour / 60;
 //jo ubsent thin or half leaves thin un kly ha ya
 let unpaidDays = absent + halfleave * 0.5;
 //invalid daays lgic
-if (daysinmonth >= 31 || daysinmonth <= 0) {
+if (daysinmonth > 31 || daysinmonth <= 0) {
   window.alert(
     "Invalid number of days in a month! Please enter a value less than or equal to 31.",
   );
@@ -29,18 +29,24 @@ if (daysinmonth >= 31 || daysinmonth <= 0) {
   window.alert(
     "Invalid input! Number of leave days cannot be negative or exceed the number of days in the month.",
   );
-} else if (extra < 0) {
+} else if (extra <= 0) {
   window.alert("Invalid input! Extra amount cannot be negative.");
-} else if (ramdanbouspercent < 0 || ramdanbouspercent > 100) {
+} else if (ramdanbouspercent <= 0 || ramdanbouspercent >= 100) {
   window.alert(
     "Invalid input! Ramadan bonus percentage must be between 0 and 100.",
   );
-} else if (basesalery < 0 || basesalery > 1000000) {
+} else if (basesalery <= 0 || basesalery >= 1000000) {
   window.alert("Invalid input! Base salary must be between 0 and 1,000,000.");
-} else if (hoursperday <= 0 || hoursperday > 24) {
-  window.alert("Invalid input! Hours per day must be between 1 and 24.");
-} else if (perday <= 0) {
-  window.alert("Invalid input! Per day salary must be greater than 0.");
+} else if (absent > daysinmonth || absent < 0) {
+  window.alert(
+    "Invalid input! Absent or half leave days cannot exceed the number of days in the month.",
+  );
+} else if (halfleave > daysinmonth || halfleave < 0) {
+  window.alert(
+    "Invalid input! Half leave days cannot exceed the number of days in the month.",
+  );
+} else if (netSalary <= 0) {
+  window.alert("0");
 }
 //leave logic
 if (sickleave > 0) {
