@@ -26,8 +26,8 @@ if (daysinmonth > 31 || daysinmonth <= 0) {
   halfleave > daysinmonth ||
   sickleave > daysinmonth
 ) {
-  window.alert(
-    "Invalid input! Number of leave days cannot be negative or exceed the number of days in the month.",
+  document.writeln(
+    "Invalid input! Absent, half leave, and sick leave days must be between 0 and the number of days in the month.",
   );
 } else if (extra <= 0) {
   window.alert("Invalid input! Extra amount cannot be negative.");
