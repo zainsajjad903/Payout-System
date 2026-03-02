@@ -30,23 +30,25 @@ if (daysinmonth > 31 || daysinmonth <= 0) {
     "Invalid input! Absent, half leave, and sick leave days must be between 0 and the number of days in the month.",
   );
 } else if (extra <= 0) {
-  window.alert("Invalid input! Extra amount cannot be negative.");
+  document.writeln("Invalid input! Extra amount must be greater than 0.");
 } else if (ramdanbouspercent <= 0 || ramdanbouspercent >= 100) {
   document.writeln(
     "Invalid input! Ramadan bonus percentage must be between 0 and 100.",
   );
 } else if (basesalery <= 0 || basesalery >= 1000000) {
-  window.alert("Invalid input! Base salary must be between 0 and 1,000,000.");
+  document.writeln(
+    "Invalid input! Base salary must be between 0 and 1,000,000.",
+  );
 } else if (absent > daysinmonth || absent < 0) {
-  window.alert(
+  document.writeln(
     "Invalid input! Absent or half leave days cannot exceed the number of days in the month.",
   );
 } else if (halfleave > daysinmonth || halfleave < 0) {
-  window.alert(
+  document.writeln(
     "Invalid input! Half leave days cannot exceed the number of days in the month.",
   );
 } else if (netSalary <= 0) {
-  window.alert("0");
+  document.writeln("Net salary is 0.");
 }
 //leave logic
 if (sickleave > 0) {
