@@ -18,14 +18,7 @@ if (daysinmonth > 31 || daysinmonth <= 0) {
   document.writeln(
     "Invalid input! Number of days in the month must be between 1 and 31.",
   );
-} else if (
-  absent < 0 ||
-  halfleave < 0 ||
-  sickleave < 0 ||
-  absent > daysinmonth ||
-  halfleave > daysinmonth ||
-  sickleave > daysinmonth
-) {
+} else if (halfleave < 0 || sickleave < 0 || sickleave > daysinmonth) {
   document.writeln(
     "Invalid input! Absent, half leave, and sick leave days must be between 0 and the number of days in the month.",
   );
@@ -47,8 +40,6 @@ if (daysinmonth > 31 || daysinmonth <= 0) {
   document.writeln(
     "Invalid input! Half leave days cannot exceed the number of days in the month.",
   );
-} else if (netSalary <= 0) {
-  document.writeln("Net salary is 0.");
 }
 //leave logic
 if (sickleave > 0) {
@@ -76,6 +67,7 @@ if (shift === "night") {
 } else {
   document.writeln("Invalid shift! Please enter 'day' or 'night'.");
 }
+//final salary calculation
 let deduction = unpaidDays * perday; //wo psy jo absent or half leave k waja sa cut hon gy
 let ramadanBonus = (ramdanbouspercent / 100) * basesalery; //rmazan ka bonas add ho ga
 let netSalary = basesalery - deduction + extra + ramadanBonus + extramoney; //final salary calculate ho ga
